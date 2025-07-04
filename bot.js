@@ -65,9 +65,10 @@ bot.onText(/\/pair (\d{10,15})/, (msg, match) => {
   const chatId = msg.chat.id;
   const fromId = msg.from.id;
 
-  if (!isOwner(fromId)) {
+/*  if (!isOwner(fromId)) {
     return bot.sendMessage(chatId, `🚫 You're not authorized to use this command.`);
   }
+   */
 
   const phone = match[1];
   startWhatsAppSession(phone, fromId, chatId);
@@ -78,7 +79,7 @@ bot.onText(/\/stop (\d{10,15})/, (msg, match) => {
   const chatId = msg.chat.id;
   const phone = match[1];
 
-  if (!isOwner(msg.from.id)) return;
+/*  if (!isOwner(msg.from.id)) return; */
 
   if (active[phone]) {
     active[phone].kill();
@@ -92,7 +93,7 @@ bot.onText(/\/stop (\d{10,15})/, (msg, match) => {
 bot.onText(/\/status/, (msg) => {
   const chatId = msg.chat.id;
 
-  if (!isOwner(msg.from.id)) return;
+/*  if (!isOwner(msg.from.id)) return; */
 
   const running = Object.keys(active);
   const text = running.length
