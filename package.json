@@ -1,0 +1,20 @@
+{
+  "name": "kunle-bot-host",
+  "version": "1.0.0",
+  "description": "Multi-session WhatsApp bot hosting with Telegram control",
+  "main": "bot.js",
+  "scripts": {
+    "start:bot": "node bot.js",
+    "start:main": "node main.js",
+    "start:session": "node index.js",
+    "start": "node bot.js"
+  },
+  "author": "Ayodele David (Gabimaru)",
+  "license": "MIT",
+  "dependencies": {
+    "node-cache": "^5.1.2",
+    "node-telegram-bot-api": "^0.66.0",
+    "pino": "^8.17.0"
+  },
+  "keywords": ["baileys", "nodejs", "gabimaru"]
+}
